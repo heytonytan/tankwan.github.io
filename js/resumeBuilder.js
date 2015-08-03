@@ -119,7 +119,7 @@ var work = { // work contains
       "title": "Co-Chair", //      title: string
       "location": "Singapore", //      location: string
       "dates": "July 2013 - Present", //      dates: string (works with a hyphen between them)
-      "description": "Created mobile-responsive scheduling web application using Ruby Sinatra framework to match over 80 alumni interviewers with over 250 undergraduate applicants annually. Refined features of web application to include functionalities like auto-scheduling, self-service booking, and interview assignment listing, doing away with the administrative work of manually scheduling over 250 alumni interviews." //      description: string
+      "description": "Created mobile-responsive scheduling web application using Ruby Sinatra framework to match over 80 alumni interviewers with over 250 undergraduate applicants annually. Refined features of web application to include functionalities like auto-scheduling, self-service booking, and interview assignment listing, doing away with the administrative work of manually scheduling over 250 alumni interviews. (Disclaimer: Screenshots shown do not involve actual data.)" //      description: string
     },
     {
       "employer": "Penn and Wharton Alumni Club of Singapore", //      employer: string
