@@ -119,7 +119,7 @@ var work = { // work contains
       "title": "Co-Chair", //      title: string
       "location": "Singapore", //      location: string
       "dates": "July 2013 - Present", //      dates: string (works with a hyphen between them)
-      "description": "Created mobile-responsive scheduling web application using Ruby Sinatra framework to match over 80 alumni interviewers with over 250 undergraduate applicants annually. Refined features of web application to include functionalities like auto-scheduling, self-service booking, and interview assignment listing, doing away with the administrative work of manually scheduling over 250 alumni interviews. (Disclaimer: Screenshots shown do not involve actual data.)" //      description: string
+      "description": "Created mobile-responsive scheduling web application using Ruby Sinatra framework to match over 80 alumni interviewers with over 250 undergraduate applicants annually. Refined features of web application to include functionalities like auto-scheduling, self-service booking, and interview assignment listing, doing away with the administrative work of manually scheduling over 250 alumni interviews." //      description: string
     },
     {
       "employer": "Penn and Wharton Alumni Club of Singapore", //      employer: string
@@ -156,7 +156,7 @@ var projects = { // projects contains:
     {
       "title": "University Interviews Web Application (Web Application Creation)", //       title: string
       "dates": "Sep 2013 - Feb 2015", //       dates: string (works with a hyphen between them)
-      "description": "Web application built using Ruby Sinatra web framework to organize university interviews for the University of Pennsylvania. Conceptualized and coded up entire web application from scratch. Created functions for automated data entry, self-update of contact details, interview booking function, one-page information display, interview assignment collation, interview statistics monitoring, and interview assignment function.", //       description: string
+      "description": "Web application built using Ruby Sinatra web framework to organize university interviews for the University of Pennsylvania. Conceptualized and coded up entire web application from scratch. Created functions for automated data entry, self-update of contact details, interview booking function, one-page information display, interview assignment collation, interview statistics monitoring, and interview assignment function. (Disclaimer: Screenshots shown do not involve actual data.)", //       description: string
       "images": [ //       images: array with string urls
         "images/paip1.png",
         "images/paip2.png",
