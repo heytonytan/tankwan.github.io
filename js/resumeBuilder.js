@@ -3,13 +3,13 @@ var bio = { // bio contains:
   "name": "Tony K. Tan", // name : string
   "role": "Problem Solver", // role : string
   "contacts": { // contacts : an object with
-    "mobile": "+(65) 96831445", //       mobile: string
+    //"mobile": "+(65) 96831445", //       mobile: string
     "email": "t@tonyktan.com", //       email: string
-    "github": "tankwan", //       github: string
-    "twitter": "@tonytankwan", //       twitter: string
+    //"github": "tankwan", //       github: string
+    //"twitter": "@tonytankwan", //       twitter: string
     "location": "Singapore" //       location: string
   },
-  "welcomeMessage": "Welcome to my resume!", // welcomeMessage: string
+  "welcomeMessage": "Welcome to my webpage.", // welcomeMessage: string
   "skills": [ // skills: array of strings
     "Ruby",
     "Python",
@@ -25,7 +25,7 @@ var bio = { // bio contains:
   "bioPic": "images/tonyktan.jpeg", // biopic: url
   "display": function() {
     var displayHead = function(){
-      $("#header").prepend(HTMLheaderRole.replace("%data%", bio["role"]));
+      //$("#header").prepend(HTMLheaderRole.replace("%data%", bio["role"]));
       $("#header").prepend(HTMLheaderName.replace("%data%", bio["name"]));
 
       if (bio["contacts"]) {
@@ -34,19 +34,21 @@ var bio = { // bio contains:
           newContact = HTMLcontactGeneric.replace("%contact%", contact);
           newContact = newContact.replace("%data%", bio["contacts"][contact]);
           $("#topContacts").append(newContact);
-          $("#footerContacts").append(newContact);
+          //$("#footerContacts").append(newContact);
         }
       }
 
-      $("#header").append(HTMLbioPic.replace("%data%", bio["bioPic"]));
-      $("#header").append(HTMLWelcomeMsg.replace("%data%", bio["welcomeMessage"]));
+      //$("#header").append(HTMLbioPic.replace("%data%", bio["bioPic"]));
+      //$("#header").append(HTMLWelcomeMsg.replace("%data%", bio["welcomeMessage"]));
 
+      /*
       if (bio["skills"].length > 0) {
         $("#header").append(HTMLskillsStart);
         for (i = 0; i < bio["skills"].length; i++) {
           $("#skills").append(HTMLskills.replace("%data%", bio["skills"][i]));
         }
       }
+      */
     };
     displayHead();
   } // display: function
@@ -192,11 +194,13 @@ var projects = { // projects contains:
   }// display: function
 };
 
+
 bio.display();
+/*
 education.display();
 work.display();
 projects.display();
-
+*/
 var displayMap = function() {
   $("#mapDiv").append(googleMap);
 };
