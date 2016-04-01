@@ -177,14 +177,16 @@
                 <hr class="featurette-divider">
 
                 <div class="row featurette text-left">
-                  <div class="col-md-7">
+                  <div class="col-md-5">
 
                     <h4 class="featurette-heading">Dimensionality Reduction</h4>
 
-                    <p>Prior to applying data science techniques, we would like to see if we can condense the number of fields to facilitate analysis. Categorizing the numerous data fields and applying techniques like Principal Component Analysis, we are able to reduce the dataset into 10 fields:</p>
+                    <p>To condense the number of fields to facilitate analysis. Using Principal Component Analysis, we reduce the dataset into 10 fields:</p>
 
                     <ol>
-                      <li>ID, Lat and Long</li>
+                      <li>ID</li>
+                      <li>Latitude</li> 
+                      <li>Longitude</li>
                       <li>Location</li>
                       <li>Space</li>
                       <li>Price</li>
@@ -195,22 +197,22 @@
                     </ol>
 
                   </div>
-                  <div class="col-md-5">
-                    <img class="featurette-image img-fluid center-block" data-src="holder.js/225x225/auto" alt="Generic placeholder image">
+                  <div class="col-md-7">
+                    <img class="featurette-image img-fluid center-block" src="../images/location-biplot.png" alt="Location Biplot" width="350" height="350">
                   </div>
                 </div>
 
                 <hr class="featurette-divider">
      
                 <div class="row featurette text-left">
-                  <div class="col-md-7 col-md-push-5">
-                    <h4 class="featurette-heading">Correlations</h4>
+                  <div class="col-md-6 col-md-push-6">
+                    <h4 class="featurette-heading">Correlations of Attributes</h4>
                     
-                    <p>By plotting some correlation matrices, we can observe the relations of the fields between each other. We can observe that the field with the strongest correlation to popularity is host-relevant fields. It was also interesting to note that the pairs of price:space and host:rating had strong correlations with each other.</p>
+                    <p>By plotting a correlation matrix, we can observe the relations of the fields between each other. We can observe that the field with the strongest correlation to popularity is host-relevant fields. It was also interesting to note that the data field pairs of price:space and host:rating had strong correlations with each other.</p>
 
                   </div>
-                  <div class="col-md-5 col-md-pull-7">
-                    <img class="featurette-image img-fluid center-block" data-src="holder.js/200x200/auto" alt="Generic placeholder image"><br>
+                  <div class="col-md-6 col-md-pull-6">
+                    <img class="featurette-image img-fluid center-block" src="../images/corr.png" alt="Correlation Matrix" width="310" height="220"><br>
                   </div>
                 </div>
 
@@ -219,55 +221,44 @@
                 <div class="row featurette text-left">
                   <div class="col-md-7">
 
-                    <h4 class="featurette-heading">Regressions</h4>
+                    <h4 class="featurette-heading">Pricing: A Key Determinant of Popularity</h4>
 
-                    <p>Doing some logistic regressions, we are able to discern that beyond a certain price point, room size, and below a certain rating level, the listing was almost certain to be unpopular. At the same time, </p>
+                    <p>Fitting the price data to a logistic regression showed that if a listing was priced beyond a certain point, an Airbnb listing was bound to be unpopular. At the same time, high-priced listings might have intended to position themselves as high-margin and low-volume.</p>
 
                   </div>
                   <div class="col-md-5">
-                    <img class="featurette-image img-fluid center-block" data-src="holder.js/225x225/auto" alt="Generic placeholder image">
+                    <img class="featurette-image img-fluid center-block" src="../images/price-logreg.png" alt="Logistic Regression Price" width="250" height="250">
                   </div>
                 </div>
 
                 <hr class="featurette-divider">            
 
                 <div class="row featurette text-left">
-                  <div class="col-md-7 col-md-push-5">
-                    <h4 class="featurette-heading">Clustering</h4>
+                  <div class="col-md-6 col-md-push-6">
+                    <h4 class="featurette-heading">Three Pricing Clusters</h4>
 
-                    <p>Applying K-means clustering, we are generally able to observe three clusters—the majority (blue), the higher-priced, higher-rating (green), and the extremely priced outliers (red). In terms of popularity, we are also able to observe that there is no particularly identifier group with specific combinations of characteristics. This makes sense, since the attributes of a listing generally fall within a spectrum.</p>
+                    <p>Applying K-means clustering, we are generally able to observe three pricing tiers—budget range (blue), mid-end range (green), and high-end range (red). The high-end listings were essentially outliers, priced far above the rest of the listings.</p>
 
                   </div>
-                  <div class="col-md-5 col-md-pull-7">
-                    <img class="featurette-image img-fluid center-block" data-src="holder.js/200x200/auto" alt="Generic placeholder image"><br>
+                  <div class="col-md-6 col-md-pull-6">
+                    <img class="featurette-image img-fluid center-block" src="../images/kmeans-clustering.png" alt="K-means Clustering" width="250" height="250"><br>
                   </div>
                 </div>
 
                 <hr class="featurette-divider">
 
                 <div class="row featurette text-left">
-                  <div class="col-md-7">
+                  <div class="col-md-6">
 
-                    <p>When we scale the attributes, we see a different picture. The three clusters are separated into the north-east located (red), the high host ratings (green), and the rest (blue). Computing the silhouette score hockey stick curve, we can see that the SC of k=3 does not differ much by k=11.</p>
+                    <h4 class="featurette-heading">Rule of Three</h4>
 
-                  </div>
-                  <div class="col-md-5">
-                    <img class="featurette-image img-fluid center-block" data-src="holder.js/225x225/auto" alt="Generic placeholder image">
-                  </div>
-                </div>
+                    <p>Computing the silhouette score hockey stick curve, we can see that the SC of k=3 does not differ much by k=11 as well.</p>
 
-                <hr class="featurette-divider">
-              
-                <div class="row featurette text-left">
-                  <div class="col-md-7 col-md-push-5">
-
-                    <p>Applying DBSCAN leads to a clustering where there were quite a number of unclassified data points (yellow), which were observed to be outliers in certain attributes. The high host ratings group (green) emerged again, together with the rest (red). There is also one cluster of low latitude, small space, high rating, low popularity group (blue), suggesting that they might be niche listings.</p>
-
-                    <p>Clustering was observed to be useful for discovering archetypes in the data, especially when the data fields are listing attributes.</p>
+                    <p>Clustering was useful for discovering archetypes in the data, especially when there were observable distinct groups.</p>
 
                   </div>
-                  <div class="col-md-5 col-md-pull-7">
-                    <img class="featurette-image img-fluid center-block" data-src="holder.js/200x200/auto" alt="Generic placeholder image"><br>
+                  <div class="col-md-6">
+                    <img class="featurette-image img-fluid center-block" src="../images/hockey-stick-curve.png" alt="K-means Clustering" width="250" height="250">
                   </div>
                 </div>
 
