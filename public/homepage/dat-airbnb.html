@@ -267,68 +267,109 @@
                 <div class="row featurette text-left">
                   <div class="col-md-7">
 
-                    <h4 class="featurette-heading">Decision Trees</h4>
+                    <h4 class="featurette-heading">Corroborating with Trees and Forests</h4>
 
-                    <p>Applying decision trees, we found that the RMSE is minimised when max depth was 4, and that ratings, price, and host were the most important factors in determining popularity. While we were surprised to know that the space did not factor as strongly, this made sense to us, as the price determined the net value, and the host determined the quality of experience that an Airbnb user would get. Applying random forests, we derived the similar conclusion.</p>
+                    <p>Applying decision trees, we found that the RMSE is minimised when max depth was 4, and that rating, price, and host were the most important factors in determining popularity.</p>
 
-                    <p>From this, we observed that the main quantitative discriminant of popularity for a new listing might just be price. If it falls within a particular band, it has the chance of becoming popular. Beyond a certain price band, it may have to expect booking volumes as a niche listing. Hence, there could be potential to recommend a price band for listings in a particular area.</p>
+                    <p>From this, we observed that the main quantitative discriminant of popularity for a new listing might just be price. If it falls within a particular band, it has the chance of becoming popular. Hence, there could be potential to recommend a price band for hosts.</p>
 
                   </div>
+                  <br>
                   <div class="col-md-5">
-                    <img class="featurette-image img-fluid center-block" data-src="holder.js/225x225/auto" alt="Generic placeholder image">
+                    <img class="featurette-image img-fluid center-block" src="../images/gini-importance.png" alt="Gini Importance"width="220" height="240">
                   </div>
+
+                </div>
+
+                <br>
+
+                <div class="row featurette">
+
+                  <div class="col-md-12">
+                    <img class="featurette-image img-fluid center-block" src="../images/tree_abnb.png" alt="Airbnb Decision Tree" width="650" height="180">
+                  </div>
+
                 </div>
 
                 <hr class="featurette-divider">
 
                 <div class="row featurette text-left">
-                  <div class="col-md-7 col-md-push-5">
+                  <div class="col-md-12">
 
-                    <h4 class="featurette-heading">Naive Bayes</h4>
+                    <img class="featurette-image img-fluid center-block" src="../images/naive-bayes-accuracy.png" alt="Naive Bayes Accuracy" width="550" height="350"><br>
+
+                    <h4 class="featurette-heading">The Text May Tell Us Something</h4>
 
                     <p>From the structured description data, we were able to apply Naive Bayes to find something interesting. With a ngrams of n=2, we were able to observe that the predictive ability of the vectorised vocabulary is surprisingly high, of up to 70% and above. With the text data, we can predict with reasonable accuracy whether a listing would be popular.</p>
 
-                    <p>Initially, we assumed that Airbnb hosts wrote their own listing information. Upon asking friends who were Airbnb hosts, we learned that when hosts put up listings, they do receive help from Airbnb to flesh out the listing descriptions. Hence, interesting follow up work could be done to develop further understanding of the text. For instance, particular words could contribute to popularity, making it a copywriting problem; the text could reflect particular attributes that reflect the inherent popularity of the listings.</p>
+                    <p>Interesting follow up work could be done to understand the description drafting process. For instance, particular words could contribute to popularity, making it a copywriting problem; the text could otherwise contain nouns and verbs that reflect the inherent popularity of the listings. These could all possibly translate into prompts in the form filling process to support Airbnb hosts' success.</p>
 
-                    <p>In the meantime, if we could take the description listings and run naïve bayes through it, we could in the meantime have a reasonably good predictor of popularity.</p>
+                    <p>In the meantime, if we could take the description data and run naïve bayes through it, we could have a reasonably good predictor of popularity.</p>
 
-                    <p>Clustering was observed to be useful for discovering archetypes in the data, especially when the data fields are listing attributes.</p>
-
-                  </div>
-                  <div class="col-md-5 col-md-pull-7">
-                    <img class="featurette-image img-fluid center-block" data-src="holder.js/200x200/auto" alt="Generic placeholder image"><br>
                   </div>
                 </div>
 
                 <hr class="featurette-divider">
 
                 <div class="row featurette text-left">
-                  <div class="col-md-7">
+                  <div class="col-md-12">
 
-                    <h4 class="featurette-heading">Harnessing These Findings to Promote New Listings</h4>
+                    <img class="featurette-image img-fluid center-block" src="../images/airbnb-fresh-tag.png" alt="Airbnb Fresh Tag" width="550" height="400"><br>
 
-                    <p>To apply the insights to the actual Airbnb platform, we can use the description field as a predictor of the popularity of new listings. For the listings that have a good chance of becoming a popular listing, the Airbnb platform should promote them to give them some opportunity of being considered by an Airbnb user. This could come in the form of a “Fresh!” tag on the Airbnb page.</p>
+                    <h4 class="featurette-heading">Fresh! Tag For Promising New Listings</h4>
 
-                  </div>
-                  <div class="col-md-5">
-                    <img class="featurette-image img-fluid center-block" data-src="holder.js/225x225/auto" alt="Generic placeholder image">
+                    <p>To apply the insights to the actual Airbnb platform, we could possibly use the description field as a predictor of the popularity of new listings. For listings that have a good chance of becoming a popular listing, the Airbnb platform should promote them as a "Fresh!" listing, in place of rating stars and review counts to give them higher odds of being considered by an Airbnb user.</p>
+
                   </div>
                 </div>
 
                 <hr class="featurette-divider">
 
                 <div class="row featurette text-left">
-                  <div class="col-md-7 col-md-push-5">
+                  <div class="col-md-12">
 
-                    <p>In addition, Airbnb could also suggest the price range that a new listing should take on. With an indicative benchmark, Airbnb hosts can better price their listings to give themselves the best chance for popularity.</p>
+                    <img class="featurette-image img-fluid center-block" src="../images/price-caution.png" alt="Airbnb Price Caution" width="550" height="400"><br>
+
+                    <h4 class="featurette-heading">Suggest a Listing Price Limit</h4>
+
+                    <p>Airbnb could display a caution when an Airbnb host attempts to overprice a listing. This will help hosts better price their listings to give themselves the best chance for popularity.</p>
 
                   </div>
                   <div class="col-md-5 col-md-pull-7">
-                    <img class="featurette-image img-fluid center-block" data-src="holder.js/200x200/auto" alt="Generic placeholder image"><br>
+                    
                   </div>
                 </div>
 
                 <hr class="featurette-divider">
+
+                <div class="row featurette">
+
+                  <div class="col-md-12">
+
+                    <img class="featurette-image img-fluid center-block" src="../images/airbnb-growth-curve.png" alt="Airbnb Price Caution" width="400" height="400">
+                    <sub class="text-center">Source: <a href="http://static2.businessinsider.com/image/55ef1d389dd7cc22008b8c30-2000-2000/airbnb%20dada.png">Business Insider</a></sub>
+
+                    <br>
+
+                    <h4 class="featurette-heading text-left">Conclusion</h4>
+
+                    <p class="text-left">In the past 5 years, the growth of Airbnb has been rapid. Going forward, there will be a need to prempt any constraints to scaling further, and besides making regulatory inroads, the continued growth of the Airbnb host community will be key. As the host community matures over the coming years, there will be a need to implement mechanisms for new and promising hosts to have good odds of building up a great track record. Applying data science techniques to publicly available data, we are able to suggest some small steps to do so.</p>
+
+                  </div>
+
+                </div>
+
+                <hr class="featurette-divider">
+
+                <div class="row featurette">
+
+                  <div class="col-md-12">
+
+                    <p class="text-left"><em>Disclaimer: This writeup is a project submission as part of a class on data science. Any findings, or recommendations are meant as practice for applying data science concepts to hypothetical business use cases and are to be used with caution. Views expressed are solely those of the author and do not reflect that of his employer.</em></p>
+
+                  </div>
+
+                </div>
 
                 <!-- /END THE FEATURETTES -->
           </div>
