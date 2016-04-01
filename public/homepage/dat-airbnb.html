@@ -57,6 +57,10 @@
 
           <div class="inner cover">
 
+                <h4 class="media-heading">Data Science Project:</h2>
+                <h3 class="media-heading"><strong>Saving Airbnb from Listing Saturation</strong></h3>
+                <h4 class="media-heading"><em>Data-driven Boosting of New Host Listings</em></h4>
+
                 <!-- START THE FEATURETTES -->
                 <article class="media">
                   <div class="media-left">
@@ -88,7 +92,7 @@
                     <p>Should we find that we can predict popularity with reasonable accuracy, we will suggest a feature on the Airbnb platform to boost promising new listings.</p>
                   </div>
                   <div class="col-md-5">
-                    <img class="featurette-image img-fluid center-block" data-src="holder.js/225x225/auto" alt="Generic placeholder image">
+                    <img class="featurette-image img-fluid center-block" src="../images/airbnb-map-ss.png" alt="Airbnb Map Screenshot" width="250" height="250">
                   </div>
                 </div>
 
@@ -97,92 +101,245 @@
                 <div class="row featurette text-left">
                   <div class="col-md-7 col-md-push-5">
                     <h4 class="featurette-heading">Acquiring the Data</h4>
-                    <p>Thanks to Murray Cox, there is extensive Airbnb data available online. Reviewing 121 data fields across 7 data sets, we will focus on the 4 areas that appear most useful:</p>
+                    <p>Thanks to <em><a href="http://insideairbnb.com/">Murray Cox</a></em>, there is extensive Airbnb data available online. From the numerous data fields, we will focus on 4 areas:</p>
 
-                    <p><strong>a) Listings attributes</strong> - The data contains fields that present the various attributes of the listing, including location, home type, price, amenities, capacity, costs, etc. The fields are detailed, forming a comprehensive picture of the listings in quantitative, concrete terms.</p>
+                    <p><strong>a) Listings attributes</strong> - Fields that present the various attributes of the listing, including location, home type, price, amenities, capacity, costs, etc.</p>
 
-                    <p><strong>b) Host attributes</strong> - For each listing, there is detailed information on the quality and behavior of the Airbnb host, including the date which the host started listing on Airbnb, whether the host is of quality, how many listings the host has, etc.</p>
+                    <p><strong>b) Host attributes</strong> - Detailed information on the quality and behavior of the Airbnb host.</p>
 
-                    <p><strong>c) Text descriptions</strong> - For each listing, there is extensive text data describing various aspects of the listing, including details of the home, neighbourhood, and means of transport.</p>
+                    <p><strong>c) Text descriptions</strong> - Extensive text data describing details of the home, neighbourhood, means of transport, etc.</p>
 
-                    <p><strong>d) Ratings and reviews</strong> - For each listing, there are review scores covering various aspects of the listing, such as its accuracy, cleanliness, check-in, communication, location, and value. These figures help to form a user-validated picture of the quality of the listing. There are also multiple reviews containing user comments.</p>
+                    <p><strong>d) Ratings and reviews</strong> - Review scores covering various aspects of the listing, such accuracy, cleanliness, check-in, communication, location, and value.</p>
 
                   </div>
                   <div class="col-md-5 col-md-pull-7">
-                    <img class="featurette-image img-fluid center-block" data-src="holder.js/200x200/auto" alt="Generic placeholder image"><br>
-                    <img class="featurette-image img-fluid center-block" data-src="holder.js/200x200/auto" alt="Generic placeholder image"><br>
-                    <img class="featurette-image img-fluid center-block" data-src="holder.js/200x200/auto" alt="Generic placeholder image"><br>
-                    <img class="featurette-image img-fluid center-block" data-src="holder.js/200x200/auto" alt="Generic placeholder image">
+                    <img class="featurette-image img-fluid center-block" src="../images/data-fields-ss.png" alt="Data Fields Screenshot" width="269" height="369"><br>
                   </div>
                 </div>
 
                 <hr class="featurette-divider">
 
-                <div class="row featurette">
+                <div class="row featurette text-left">
                   <div class="col-md-7">
-                    <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
-                    <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+
+                    <h4 class="featurette-heading">Focus on the SF Airbnb Community</h4>
+
+                    <p>SF is the home city of Airbnb, and is currently one of the most fascinating real estate markets in the world. With the tech industry fuelling housing prices and rentals, Airbnb has grown into a way which homeowners list their homes or rooms for short-term stays in order to parlay their housing costs. The Airbnb landscape is comparatively developed in SF, which makes it a suitable city to study as a mature listings community.</p>
+
                   </div>
-                  <div class="col-md-5 media-middle">
-                    <img class="featurette-image img-fluid center-block" data-src="holder.js/200x200/auto" alt="Generic placeholder image">
+                  <div class="col-md-5">
+                    <img class="featurette-image img-fluid center-block" src="../images/golden_gate_bridge.jpg" alt="Golden Gate Bridge">
+                  </div>
+                </div>
+
+                <hr class="featurette-divider">
+
+                <div class="row featurette text-left">
+                  <div class="col-md-7 col-md-push-5">
+                    <h4 class="featurette-heading">Visualizing the Maturation of the SF Airbnb Community</h4>
+
+                    <p>Using the latitude and longitude fields, we are able to geographically plot the listings and observe the distribution of listings in San Francisco. In general, the listings are concentrated in the north-east region of the city, with an outward radial dispersion towards the west and southward areas. Clustering the listings using DBSCAN, we are able to observe that there is a extended saturated region in the central to north-eastern part of SF. with the city fringes as perpheral clusters.</p>
+
+                  </div>
+                  <div class="col-md-5 col-md-pull-7">
+                    <img class="featurette-image img-fluid center-block" src="../images/airbnb-sf-saturation.png" alt="Airbnb Saturation" width="275" height="275"><br>
+                  </div>
+                </div>
+
+                <hr class="featurette-divider">
+
+                <div class="row featurette text-left">
+                  <div class="col-md-4">
+                    <h4 class="featurette-heading">Affordable Price for SF Listings</h4>
+
+                    <p>Charting a density scatterplot by price vs. popularity, we observe that listings tend towards the $50 to $150 per bed range. This is interesting, as it suggests that many Airbnb listings are offered as lower-end accomodation, and compete on a different price point as compared to hotels.</p>
+
+                  </div>
+                  <div class="col-md-8">
+                    <img class="featurette-image img-fluid center-block" src="../images/density-plot.png" alt="Density Plot" width="392" height="281">
+                  </div>
+                </div>
+
+                <hr class="featurette-divider">                
+
+                <div class="row featurette text-left">
+                  <div class="col-md-9 col-md-push-3">
+                    <h4 class="featurette-heading">Defining Popularity</h4>
+
+                    <p>As a proxy for popularity, we will use the field “reviews per month”. Looking at the summary statistics of “reviews per month”, we can see that the 75th percentile of reviews is at 2.76 per month, so we will define popular as say, 3 or more reviews per month.</p>
+
+                  </div>
+                  <div class="col-md-3 col-md-pull-9">
+                    <img class="featurette-image img-fluid center-block" src="../images/describe-pop.png" alt="Popularity Statistics" width="151" height="140"><br>
+                  </div>
+                </div>
+
+                <hr class="featurette-divider">
+
+                <div class="row featurette text-left">
+                  <div class="col-md-7">
+
+                    <h4 class="featurette-heading">Dimensionality Reduction</h4>
+
+                    <p>Prior to applying data science techniques, we would like to see if we can condense the number of fields to facilitate analysis. Categorizing the numerous data fields and applying techniques like Principal Component Analysis, we are able to reduce the dataset into 10 fields:</p>
+
+                    <ol>
+                      <li>ID, Lat and Long</li>
+                      <li>Location</li>
+                      <li>Space</li>
+                      <li>Price</li>
+                      <li>Description</li>
+                      <li>Host</li>
+                      <li>Rating</li>
+                      <li>Reviews Per Month</li>
+                    </ol>
+
+                  </div>
+                  <div class="col-md-5">
+                    <img class="featurette-image img-fluid center-block" data-src="holder.js/225x225/auto" alt="Generic placeholder image">
+                  </div>
+                </div>
+
+                <hr class="featurette-divider">
+     
+                <div class="row featurette text-left">
+                  <div class="col-md-7 col-md-push-5">
+                    <h4 class="featurette-heading">Correlations</h4>
+                    
+                    <p>By plotting some correlation matrices, we can observe the relations of the fields between each other. We can observe that the field with the strongest correlation to popularity is host-relevant fields. It was also interesting to note that the pairs of price:space and host:rating had strong correlations with each other.</p>
+
+                  </div>
+                  <div class="col-md-5 col-md-pull-7">
+                    <img class="featurette-image img-fluid center-block" data-src="holder.js/200x200/auto" alt="Generic placeholder image"><br>
+                  </div>
+                </div>
+
+                <hr class="featurette-divider">
+
+                <div class="row featurette text-left">
+                  <div class="col-md-7">
+
+                    <h4 class="featurette-heading">Regressions</h4>
+
+                    <p>Doing some logistic regressions, we are able to discern that beyond a certain price point, room size, and below a certain rating level, the listing was almost certain to be unpopular. At the same time, </p>
+
+                  </div>
+                  <div class="col-md-5">
+                    <img class="featurette-image img-fluid center-block" data-src="holder.js/225x225/auto" alt="Generic placeholder image">
+                  </div>
+                </div>
+
+                <hr class="featurette-divider">            
+
+                <div class="row featurette text-left">
+                  <div class="col-md-7 col-md-push-5">
+                    <h4 class="featurette-heading">Clustering</h4>
+
+                    <p>Applying K-means clustering, we are generally able to observe three clusters—the majority (blue), the higher-priced, higher-rating (green), and the extremely priced outliers (red). In terms of popularity, we are also able to observe that there is no particularly identifier group with specific combinations of characteristics. This makes sense, since the attributes of a listing generally fall within a spectrum.</p>
+
+                  </div>
+                  <div class="col-md-5 col-md-pull-7">
+                    <img class="featurette-image img-fluid center-block" data-src="holder.js/200x200/auto" alt="Generic placeholder image"><br>
+                  </div>
+                </div>
+
+                <hr class="featurette-divider">
+
+                <div class="row featurette text-left">
+                  <div class="col-md-7">
+
+                    <p>When we scale the attributes, we see a different picture. The three clusters are separated into the north-east located (red), the high host ratings (green), and the rest (blue). Computing the silhouette score hockey stick curve, we can see that the SC of k=3 does not differ much by k=11.</p>
+
+                  </div>
+                  <div class="col-md-5">
+                    <img class="featurette-image img-fluid center-block" data-src="holder.js/225x225/auto" alt="Generic placeholder image">
+                  </div>
+                </div>
+
+                <hr class="featurette-divider">
+              
+                <div class="row featurette text-left">
+                  <div class="col-md-7 col-md-push-5">
+
+                    <p>Applying DBSCAN leads to a clustering where there were quite a number of unclassified data points (yellow), which were observed to be outliers in certain attributes. The high host ratings group (green) emerged again, together with the rest (red). There is also one cluster of low latitude, small space, high rating, low popularity group (blue), suggesting that they might be niche listings.</p>
+
+                    <p>Clustering was observed to be useful for discovering archetypes in the data, especially when the data fields are listing attributes.</p>
+
+                  </div>
+                  <div class="col-md-5 col-md-pull-7">
+                    <img class="featurette-image img-fluid center-block" data-src="holder.js/200x200/auto" alt="Generic placeholder image"><br>
+                  </div>
+                </div>
+
+                <hr class="featurette-divider">
+
+                <div class="row featurette text-left">
+                  <div class="col-md-7">
+
+                    <h4 class="featurette-heading">Decision Trees</h4>
+
+                    <p>Applying decision trees, we found that the RMSE is minimised when max depth was 4, and that ratings, price, and host were the most important factors in determining popularity. While we were surprised to know that the space did not factor as strongly, this made sense to us, as the price determined the net value, and the host determined the quality of experience that an Airbnb user would get. Applying random forests, we derived the similar conclusion.</p>
+
+                    <p>From this, we observed that the main quantitative discriminant of popularity for a new listing might just be price. If it falls within a particular band, it has the chance of becoming popular. Beyond a certain price band, it may have to expect booking volumes as a niche listing. Hence, there could be potential to recommend a price band for listings in a particular area.</p>
+
+                  </div>
+                  <div class="col-md-5">
+                    <img class="featurette-image img-fluid center-block" data-src="holder.js/225x225/auto" alt="Generic placeholder image">
+                  </div>
+                </div>
+
+                <hr class="featurette-divider">
+
+                <div class="row featurette text-left">
+                  <div class="col-md-7 col-md-push-5">
+
+                    <h4 class="featurette-heading">Naive Bayes</h4>
+
+                    <p>From the structured description data, we were able to apply Naive Bayes to find something interesting. With a ngrams of n=2, we were able to observe that the predictive ability of the vectorised vocabulary is surprisingly high, of up to 70% and above. With the text data, we can predict with reasonable accuracy whether a listing would be popular.</p>
+
+                    <p>Initially, we assumed that Airbnb hosts wrote their own listing information. Upon asking friends who were Airbnb hosts, we learned that when hosts put up listings, they do receive help from Airbnb to flesh out the listing descriptions. Hence, interesting follow up work could be done to develop further understanding of the text. For instance, particular words could contribute to popularity, making it a copywriting problem; the text could reflect particular attributes that reflect the inherent popularity of the listings.</p>
+
+                    <p>In the meantime, if we could take the description listings and run naïve bayes through it, we could in the meantime have a reasonably good predictor of popularity.</p>
+
+                    <p>Clustering was observed to be useful for discovering archetypes in the data, especially when the data fields are listing attributes.</p>
+
+                  </div>
+                  <div class="col-md-5 col-md-pull-7">
+                    <img class="featurette-image img-fluid center-block" data-src="holder.js/200x200/auto" alt="Generic placeholder image"><br>
+                  </div>
+                </div>
+
+                <hr class="featurette-divider">
+
+                <div class="row featurette text-left">
+                  <div class="col-md-7">
+
+                    <h4 class="featurette-heading">Harnessing These Findings to Promote New Listings</h4>
+
+                    <p>To apply the insights to the actual Airbnb platform, we can use the description field as a predictor of the popularity of new listings. For the listings that have a good chance of becoming a popular listing, the Airbnb platform should promote them to give them some opportunity of being considered by an Airbnb user. This could come in the form of a “Fresh!” tag on the Airbnb page.</p>
+
+                  </div>
+                  <div class="col-md-5">
+                    <img class="featurette-image img-fluid center-block" data-src="holder.js/225x225/auto" alt="Generic placeholder image">
+                  </div>
+                </div>
+
+                <hr class="featurette-divider">
+
+                <div class="row featurette text-left">
+                  <div class="col-md-7 col-md-push-5">
+
+                    <p>In addition, Airbnb could also suggest the price range that a new listing should take on. With an indicative benchmark, Airbnb hosts can better price their listings to give themselves the best chance for popularity.</p>
+
+                  </div>
+                  <div class="col-md-5 col-md-pull-7">
+                    <img class="featurette-image img-fluid center-block" data-src="holder.js/200x200/auto" alt="Generic placeholder image"><br>
                   </div>
                 </div>
 
                 <hr class="featurette-divider">
 
                 <!-- /END THE FEATURETTES -->
-
-            <!-- Carousel
-                ================================================== -->
-                <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                  <!-- Indicators -->
-                  <ol class="carousel-indicators">
-                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                    <li data-target="#myCarousel" data-slide-to="1"></li>
-                    <li data-target="#myCarousel" data-slide-to="2"></li>
-                  </ol>
-                  <div class="carousel-inner" role="listbox">
-                    <div class="carousel-item active">
-                      <img class="first-slide" src="../images/clustering.png" alt="First slide">
-                      <div class="container">
-                        <div class="carousel-caption text-xs-left">
-                          <h1>Example headline.</h1>
-                          <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                          <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="carousel-item">
-                      <img class="second-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Second slide">
-                      <div class="container">
-                        <div class="carousel-caption">
-                          <h1>Another example headline.</h1>
-                          <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                          <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="carousel-item">
-                      <img class="third-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Third slide">
-                      <div class="container">
-                        <div class="carousel-caption text-xs-right">
-                          <h1>One more for good measure.</h1>
-                          <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                          <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                  </a>
-                  <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                  </a>
-                </div><!-- /.carousel -->
-
           </div>
 
           <div class="mastfoot">
@@ -196,7 +353,7 @@
       </div>
 
     </div>
-
+ß
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
