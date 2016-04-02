@@ -134,29 +134,34 @@
 
                 <hr class="featurette-divider">
 
-                <div class="row featurette text-left">
+                <div class="row featurette">
                   <div class="col-md-7 col-md-push-5">
-                    <h4 class="featurette-heading">Visualizing the Maturation of the SF Airbnb Community</h4>
+                    <h4 class="featurette-heading text-left">Visualizing the Maturation of the SF Airbnb Community</h4>
 
-                    <p>Using the latitude and longitude fields, we are able to geographically plot the listings and observe the distribution of listings in San Francisco. In general, the listings are concentrated in the north-east region of the city, with an outward radial dispersion towards the west and southward areas. Clustering the listings using DBSCAN, we are able to observe that there is a extended saturated region in the central to north-eastern part of SF. with the city fringes as perpheral clusters.</p>
+                    <p class="text-left">Using the latitude and longitude fields, we are able to geographically plot the listings and observe the distribution of listings in San Francisco. In general, the listings are concentrated in the north-east region of the city, with an outward radial dispersion towards the west and southward areas. Clustering the listings using DBSCAN, we are able to observe that there is a extended saturated region in the central to north-eastern part of SF. with the city fringes as perpheral clusters.</p>
 
                   </div>
                   <div class="col-md-5 col-md-pull-7">
-                    <img class="featurette-image img-fluid center-block" src="../images/airbnb-sf-saturation.png" alt="Airbnb Saturation" width="275" height="275"><br>
+                    <img class="featurette-image img-fluid center-block" src="../images/airbnb-sf-saturation.png" alt="Airbnb Saturation" width="275" height="275">
+
+                    <sub class="text-center"><a href="https://github.com/tankwan/tankwan.github.io/blob/master/public/airbnb-portfolio/airbnb-visualizations.ipynb">Click here for ipython notebook</a></sub>
+                    <br>
                   </div>
                 </div>
 
                 <hr class="featurette-divider">
 
-                <div class="row featurette text-left">
+                <div class="row featurette">
                   <div class="col-md-4">
-                    <h4 class="featurette-heading">Affordable Price for SF Listings</h4>
+                    <h4 class="featurette-heading  text-left">Affordable Price for SF Listings</h4>
 
-                    <p>Charting a density scatterplot by price vs. popularity, we observe that listings tend towards the $50 to $150 per bed range. This is interesting, as it suggests that many Airbnb listings are offered as lower-end accomodation, and compete on a different price point as compared to hotels.</p>
+                    <p class="text-left">Charting a density scatterplot by price vs. popularity, we observe that listings tend towards the $50 to $150 per bed range. This is interesting, as it suggests that many Airbnb listings are offered as lower-end accomodation, and compete on a different price point as compared to hotels.</p>
 
                   </div>
                   <div class="col-md-8">
                     <img class="featurette-image img-fluid center-block" src="../images/density-plot.png" alt="Density Plot" width="392" height="281">
+
+                    <sub class="text-center"><a href="https://github.com/tankwan/tankwan.github.io/blob/master/public/airbnb-portfolio/airbnb-visualizations.ipynb">Click here for ipython notebook</a></sub>
                   </div>
                 </div>
 
@@ -176,14 +181,14 @@
 
                 <hr class="featurette-divider">
 
-                <div class="row featurette text-left">
+                <div class="row featurette">
                   <div class="col-md-5">
 
-                    <h4 class="featurette-heading">Dimensionality Reduction</h4>
+                    <h4 class="featurette-heading  text-left">Dimensionality Reduction</h4>
 
-                    <p>To condense the number of fields to facilitate analysis. Using Principal Component Analysis, we reduce the dataset into 10 fields:</p>
+                    <p class="text-left">To condense the number of fields to facilitate analysis. Using Principal Component Analysis, we reduce the dataset into 10 fields:</p>
 
-                    <ol>
+                    <ol class="text-left">
                       <li>ID</li>
                       <li>Latitude</li> 
                       <li>Longitude</li>
@@ -199,6 +204,8 @@
                   </div>
                   <div class="col-md-7">
                     <img class="featurette-image img-fluid center-block" src="../images/location-biplot.png" alt="Location Biplot" width="350" height="350">
+
+                    <sub class="text-center"><a href="https://github.com/tankwan/tankwan.github.io/blob/master/public/airbnb-portfolio/airbnb-dimensionality-reduction.ipynb">Click here for ipython notebook</a></sub>
                   </div>
                 </div>
 
