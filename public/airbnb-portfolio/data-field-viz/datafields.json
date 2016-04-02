@@ -1,0 +1,80 @@
+
+{
+ "name": "Airbnb Listings Data",
+ "children": [
+  {
+   "name": "Home Attributes",
+   "children": [
+    {"name": "listing_id", "children": [{"name":"5-digit listing ID"}]},
+    {"name": "street", "children": [{"name":"Street, city, postal code"}]},
+    {"name": "neighborhood", "children": [{"name":"Listing neighborhood"}]},
+    {"name": "nieghborhood_cleansed", "children": [{"name":"Alternative listing neighborhood"}]},
+    {"name": "city", "children": [{"name":"City"}]},
+    {"name": "state", "children": [{"name":"2-character state code"}]},
+    {"name": "zipcode", "children": [{"name":"5-digit US zip code"}]},
+    {"name": "country_code", "children": [{"name":"2-character country code"}]},
+    {"name": "latitude", "children": [{"name":"Latitude of listing location"}]},
+    {"name": "longitude", "children": [{"name":"Longitude of listing location"}]},
+    {"name": "is_location_exact", "children": [{"name":"True/false field"}]},
+    {"name": "property_type", "children": [{"name":"Apartment or house"}]},
+    {"name": "room_type", "children": [{"name":"Entire home/apartment, shared room, private room"}]},
+    {"name": "accomodates", "children": [{"name":"Number"}]},
+    {"name": "bathrooms", "children": [{"name":"Float"}]},
+    {"name": "bedrooms", "children": [{"name":"Number"}]},
+    {"name": "beds", "children": [{"name":"Number"}]},
+    {"name": "bed_type", "children": [{"name":"Real bed, airbed"}]},
+    {"name": "amenities", "children": [{"name":"Tuple with \"TV\", \"Cable TV\", \"Wireless Internet\", etc."}]},
+    {"name": "price", "children": [{"name":"Price for a night's stay"}]},
+    {"name": "weekly_price", "children": [{"name":"Price for a week's stay"}]},
+    {"name": "monthly_price", "children": [{"name":"Price for a month's stay"}]},
+    {"name": "security_deposit", "children": [{"name":"Deposit fee"}]},
+    {"name": "cleaning_fee", "children": [{"name":"Fee for cleaning of home"}]},
+    {"name": "guests_included", "children": [{"name":"Number"}]},
+    {"name": "extra_people", "children": [{"name": "Fee per extra person"}]}
+   ]
+  },
+  {
+   "name": "Host Attributes",
+   "children": [
+    {"name": "host_id", "children": [{"name":"ID of host"}]},
+    {"name": "host_since", "children": [{"name":"Host start date"}]},
+    {"name": "host_location", "children": [{"name":"City or country of host"}]},
+    {"name": "host_about", "children": [{"name":"Background of host"}]},
+    {"name": "host_response_time", "children": [{"name":"NA, within an hour, within a few hours, within a day"}]},
+    {"name": "host_is_superhost", "children": [{"name":"True/false field"}]},
+    {"name": "host_neighborhood", "children": [{"name":"Name of neighborhood"}]},
+    {"name": "host_listings_count", "children": [{"name":"Number of listings that host has"}]},
+    {"name": "host_has_profile_pic", "children": [{"name":"True/false field"}]},
+    {"name": "host_identity_verified", "children": [{"name":"True/false field"}]},
+    {"name": "calculated_host_listings_count", "children": [{"name":"Number"}]}
+   ]
+  },
+  {
+   "name": "Listing Attributes",
+   "children": [
+    {"name": "name", "children": [{"name":"Name of listing"}]},
+    {"name": "summary", "children": [{"name":"Summary of listing"}]},
+    {"name": "space", "children": [{"name":"Description of apartment space"}]},
+    {"name": "description", "children": [{"name":"Description of listing"}]},
+    {"name": "neighborhood_overview", "children": [{"name":"Description of neighhorhood"}]},
+    {"name": "notes", "children": [{"name":"Additional instructions for the apartment"}]},
+    {"name": "transit", "children": [{"name":"Instructions on how to get to the apartment"}]}
+   ]
+  },
+  {
+   "name": "Ratings",
+   "children": [
+    {"name": "number_of_reviews", "children": [{"name":"Number"}]},
+    {"name": "last_review", "children": [{"name":"Date"}]},
+    {"name": "review_scores_rating", "children": [{"name":"Number out of 100"}]},
+    {"name": "review_scores_accuracy", "children": [{"name":"Number out of 10"}]},
+    {"name": "review_scores_cleanliness", "children": [{"name":"Number out of 10"}]},
+    {"name": "review_scores_checkin", "children": [{"name":"Number out of 10"}]},
+    {"name": "review_scores_communication", "children": [{"name":"Number out of 10"}]},
+    {"name": "review_scores_location", "children": [{"name":"Number out of 10"}]},
+    {"name": "review_scores_value", "children": [{"name":"Number out of 10"}]},
+    {"name": "reviews_per_month", "children": [{"name":"Float"}]}
+   ]
+  }
+ ]
+}

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"> <!-- ensures browser can parse d3 functions properly -->
+    <title>D3 Page Template</title>
+    <script type="text/javascript" src="d3/d3.js"></script>
+    <style>
+    div.bar {
+      display: inline-block;
+      width: 20px;
+      height: 75px;
+      background-color: teal;
+      margin-right: 2px;
+    }
+    </style>
+  </head>
+  <body>
+    <script type="text/javascript">
+
+      var dataset = [ 25, 7, 5, 26, 11, 8, 25, 14, 23, 19,
+                14, 11, 22, 29, 11, 13, 12, 17, 18, 10,
+                24, 18, 25, 9, 3 ];
+
+      d3.select("body").selectAll("p")
+        .data(dataset)
+        .enter()
+        .append("p")
+        .text(function(d) {
+          return "I can count up to " + d;
+        })
+        .style("color", function(d) {
+          if (d > 15) {
+            return "red";
+          } else {
+            return "black";
+          }
+        });
+
+        d3.select("body").selectAll("div")
+          .data(dataset)
+          .enter()
+          .append("div")
+          .attr("class", "bar")
+          .style("height", function(d){
+            var barHeight = d * 5;
+            return  barHeight + "px";
+          });
+
+        var w = 500;
+        var h = 50;
+
+        var svg = d3.select("body").append("svg")
+                    .attr("width", w)
+                    .attr("height", h);
+
+        var circles = svg.selectAll("circle")
+                         .data(dataset)
+                         .enter()
+                         .append("circle");
+
+        circles.attr("cx", function(d, i) {
+          return (i * 50) + 25;
+        })
+        .attr("cy", h/2)
+        .attr("r", function(d) {
+          return d;
+        })
+        .attr("fill", "yellow")
+        .attr("stroke", "orange")
+        .attr("stroke.width", function(d) {
+          return d/2;
+        });
+
+        w = 500;
+        h = 100;
+        var barpadding = 1;
+
+        svg = d3.select("body")
+                .append("svg")
+                .attr("width", w)
+                .attr("height", h);
+
+        svg.selectAll("rect")
+           .data(dataset)
+           .enter()
+           .append("rect")
+           .attr({
+              x: function(d, i) {
+                return i * (w / dataset.length);
+              },
+              y: function(d) {
+                return h - d * 4;
+              },
+              width: w / dataset.length - barpadding,
+              height: function(d){
+                return d * 4;
+              },
+              fill: function(d) {
+                return "rgb(0, 0, " + (d * 10) + ")";
+              }
+            });
+            
+        svg.selectAll("text")
+           .data(dataset)
+           .enter()
+           .append("text")
+           .text(function(d) {
+             return d;
+           })
+           .attr({
+             x: function(d, i) {
+               return i * (w / dataset.length) + (w / dataset.length - barpadding) / 2;
+             },
+             y: function(d) {
+               return h - (d * 4) + 14;
+             }
+           })
+           .attr("font-family", "sans-serif")
+           .attr("font-size", "11px")
+           .attr("fill", "white")
+           .attr("text-anchor", "middle");
+
+      dataset = [
+        [ 5,     20 ],
+        [ 480,   90 ],
+        [ 250,   50 ],
+        [ 100,   33 ],
+        [ 330,   95 ],
+        [ 410,   12 ],
+        [ 475,   44 ],
+        [ 25,    67 ],
+        [ 85,    21 ],
+        [ 220,   88 ]
+      ];
+
+      svg = d3.select("body")
+              .append("svg")
+              .attr({
+                width: w,
+                height: h
+              });
+
+       svg.selectAll("circle")
+          .data(dataset)
+          .enter()
+          .append("circle")
+          .attr({
+            cx: function(d){
+              return d[0];
+            },
+            cy: function(d){
+              return d[1];
+            },
+            r: 5
+          });
+
+    </script>
+  </body>
+</html>
+
+<!-- d3 .selectAll .data(dataset) .enter .append .text .style -->
+
+<!-- logos, use sprites backgroundposition to make dynamic logos -->
+<!-- nth-child(an+b) control sequence to change status -->
+<!-- pseudo elements - :before and :after, place content in 2 extra places for elements using content: 'at the back'; -->
+<!-- use :lastchild instead of .last to edit last element -->
+<!-- :nth-child(even) and :nth-child(odd) -->
+<!-- :nth-of-type -->
+<!-- :first-line of para -->

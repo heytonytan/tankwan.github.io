@@ -84,15 +84,18 @@
 
                 <hr class="featurette-divider">
 
-                <div class="row featurette text-left">
+                <div class="row featurette">
                   <div class="col-md-7">
-                    <h4 class="featurette-heading">Approach</h4>
-                    <p>A wealth of home listing data is available on the Airbnb platform. With this data, we will apply a range of data science techniques to see if we are able to develop accurate predictions of whether a listing is popular.</p>
+                    <h4 class="featurette-heading text-left">Approach</h4>
 
-                    <p>Should we find that we can predict popularity with reasonable accuracy, we will suggest a feature on the Airbnb platform to boost promising new listings.</p>
+                    <p class="text-left">A wealth of home listing data is available on the Airbnb platform. With this data, we will apply a range of data science techniques to see if we are able to develop accurate predictions of whether a listing is popular.</p>
+
+                    <p class="text-left">Should we find that we can predict popularity with reasonable accuracy, we will suggest a feature on the Airbnb platform to boost promising new listings.</p>
                   </div>
                   <div class="col-md-5">
                     <img class="featurette-image img-fluid center-block" src="../images/airbnb-map-ss.png" alt="Airbnb Map Screenshot" width="250" height="250">
+
+                    <sub>Screenshot from <a href="https://www.airbnb.com.sg/s/San-Francisco--CA--United-States?ss_id=os9zc2ac&s_tag=FgwUl5H1">Airbnb SF listings page</a></sub>
                   </div>
                 </div>
 
@@ -100,7 +103,9 @@
 
                 <div class="row featurette text-left">
                   <div class="col-md-7 col-md-push-5">
+
                     <h4 class="featurette-heading">Acquiring the Data</h4>
+
                     <p>Thanks to <em><a href="http://insideairbnb.com/">Murray Cox</a></em>, there is extensive Airbnb data available online. From the numerous data fields, we will focus on 4 areas:</p>
 
                     <p><strong>a) Listings attributes</strong> - Fields that present the various attributes of the listing, including location, home type, price, amenities, capacity, costs, etc.</p>
@@ -119,16 +124,19 @@
 
                 <hr class="featurette-divider">
 
-                <div class="row featurette text-left">
+                <div class="row featurette">
                   <div class="col-md-7">
 
-                    <h4 class="featurette-heading">Focus on the SF Airbnb Community</h4>
+                    <h4 class="featurette-heading text-left">Focus on the SF Airbnb Community</h4>
 
-                    <p>SF is the home city of Airbnb, and is currently one of the most fascinating real estate markets in the world. With the tech industry fuelling housing prices and rentals, Airbnb has grown into a way which homeowners list their homes or rooms for short-term stays in order to parlay their housing costs. The Airbnb landscape is comparatively developed in SF, which makes it a suitable city to study as a mature listings community.</p>
+                    <p class="text-left">SF is the home city of Airbnb, and is currently one of the most fascinating real estate markets in the world. With the tech industry fuelling housing prices and rentals, Airbnb has grown into a way which homeowners list their homes or rooms for short-term stays in order to parlay their housing costs. The Airbnb landscape is comparatively developed in SF, which makes it a suitable city to study as a mature listings community.</p>
 
                   </div>
                   <div class="col-md-5">
                     <img class="featurette-image img-fluid center-block" src="../images/golden_gate_bridge.jpg" alt="Golden Gate Bridge">
+
+                    <sub>Source: <a href="http://i3.cpcache.com/product/1166626237/golden_gate_bridge_square_sticker_3_x_3.jpg?height=225&width=225">Cafepress</a></sub>
+
                   </div>
                 </div>
 
@@ -167,15 +175,17 @@
 
                 <hr class="featurette-divider">                
 
-                <div class="row featurette text-left">
+                <div class="row featurette">
                   <div class="col-md-9 col-md-push-3">
-                    <h4 class="featurette-heading">Defining Popularity</h4>
+                    <h4 class="featurette-heading text-left">Defining Popularity</h4>
 
-                    <p>As a proxy for popularity, we will use the field “reviews per month”. Looking at the summary statistics of “reviews per month”, we can see that the 75th percentile of reviews is at 2.76 per month, so we will define popular as say, 3 or more reviews per month.</p>
+                    <p class="text-left">As a proxy for popularity, we will use the field “reviews per month”. Looking at the summary statistics of “reviews per month”, we can see that the 75th percentile of reviews is at 2.76 per month, so we will define popular as say, 3 or more reviews per month.</p>
 
                   </div>
                   <div class="col-md-3 col-md-pull-9">
-                    <img class="featurette-image img-fluid center-block" src="../images/describe-pop.png" alt="Popularity Statistics" width="151" height="140"><br>
+                    <img class="featurette-image img-fluid center-block" src="../images/describe-pop.png" alt="Popularity Statistics" width="151" height="140">
+
+                    <sub class="text-center"><a href="https://github.com/tankwan/tankwan.github.io/blob/master/public/airbnb-portfolio/airbnb-popularity-field.ipynb">Click here for ipython notebook</a></sub>
                   </div>
                 </div>
 
@@ -211,79 +221,89 @@
 
                 <hr class="featurette-divider">
      
-                <div class="row featurette text-left">
+                <div class="row featurette">
                   <div class="col-md-6 col-md-push-6">
-                    <h4 class="featurette-heading">Correlations of Attributes</h4>
+                    <h4 class="featurette-heading text-left">Correlations of Attributes</h4>
                     
-                    <p>By plotting a correlation matrix, we can observe the relations of the fields between each other. We can observe that the field with the strongest correlation to popularity is host-relevant fields. It was also interesting to note that the data field pairs of price:space and host:rating had strong correlations with each other.</p>
+                    <p class="text-left">By plotting a correlation matrix, we can observe the relations of the fields between each other. We can observe that the field with the strongest correlation to popularity is host-relevant fields. It was also interesting to note that the data field pairs of price:space and host:rating had strong correlations with each other.</p>
 
                   </div>
                   <div class="col-md-6 col-md-pull-6">
-                    <img class="featurette-image img-fluid center-block" src="../images/corr.png" alt="Correlation Matrix" width="310" height="220"><br>
+                    <img class="featurette-image img-fluid center-block" src="../images/corr.png" alt="Correlation Matrix" width="310" height="220">
+
+                    <sub class="text-center"><a href="https://github.com/tankwan/tankwan.github.io/blob/master/public/airbnb-portfolio/airbnb-regression.ipynb">Click here for ipython notebook</a></sub>
                   </div>
                 </div>
 
                 <hr class="featurette-divider">
 
-                <div class="row featurette text-left">
+                <div class="row featurette">
                   <div class="col-md-7">
 
-                    <h4 class="featurette-heading">Pricing: A Key Determinant of Popularity</h4>
+                    <h4 class="featurette-heading text-left">Pricing: A Key Determinant of Popularity</h4>
 
-                    <p>Fitting the price data to a logistic regression showed that if a listing was priced beyond a certain point, an Airbnb listing was bound to be unpopular. At the same time, high-priced listings might have intended to position themselves as high-margin and low-volume.</p>
+                    <p  class="text-left">Fitting the price data to a logistic regression showed that if a listing was priced beyond a certain point, an Airbnb listing was bound to be unpopular. At the same time, high-priced listings might have intended to position themselves as high-margin and low-volume.</p>
 
                   </div>
                   <div class="col-md-5">
                     <img class="featurette-image img-fluid center-block" src="../images/price-logreg.png" alt="Logistic Regression Price" width="250" height="250">
+
+                    <sub><a href="https://github.com/tankwan/tankwan.github.io/blob/master/public/airbnb-portfolio/airbnb-regression.ipynb">Click here for ipython notebook</a></sub>
                   </div>
                 </div>
 
                 <hr class="featurette-divider">            
 
-                <div class="row featurette text-left">
+                <div class="row featurette">
                   <div class="col-md-6 col-md-push-6">
-                    <h4 class="featurette-heading">Three Pricing Clusters</h4>
+                    <h4 class="featurette-heading text-left">Three Pricing Clusters</h4>
 
-                    <p>Applying K-means clustering, we are generally able to observe three pricing tiers—budget range (blue), mid-end range (green), and high-end range (red). The high-end listings were essentially outliers, priced far above the rest of the listings.</p>
+                    <p class="text-left">Applying K-means clustering, we are generally able to observe three pricing tiers—budget range (blue), mid-end range (green), and high-end range (red). The high-end listings were essentially outliers, priced far above the rest of the listings.</p>
 
                   </div>
                   <div class="col-md-6 col-md-pull-6">
-                    <img class="featurette-image img-fluid center-block" src="../images/kmeans-clustering.png" alt="K-means Clustering" width="250" height="250"><br>
+                    <img class="featurette-image img-fluid center-block" src="../images/kmeans-clustering.png" alt="K-means Clustering" width="250" height="250">
+
+                    <sub><a href="https://github.com/tankwan/tankwan.github.io/blob/master/public/airbnb-portfolio/airbnb-clustering.ipynb">Click here for ipython notebook</a></sub>
                   </div>
                 </div>
 
                 <hr class="featurette-divider">
 
-                <div class="row featurette text-left">
+                <div class="row featurette">
                   <div class="col-md-6">
 
-                    <h4 class="featurette-heading">Rule of Three</h4>
+                    <h4 class="featurette-heading text-left">Rule of Three</h4>
 
-                    <p>Computing the silhouette score hockey stick curve, we can see that the SC of k=3 does not differ much by k=11 as well.</p>
+                    <p class="text-left">Computing the silhouette score hockey stick curve, we can see that the SC of k=3 does not differ much by k=11 as well.</p>
 
-                    <p>Clustering was useful for discovering archetypes in the data, especially when there were observable distinct groups.</p>
+                    <p class="text-left">Clustering was useful for discovering archetypes in the data, especially when there were observable distinct groups.</p>
 
                   </div>
                   <div class="col-md-6">
                     <img class="featurette-image img-fluid center-block" src="../images/hockey-stick-curve.png" alt="K-means Clustering" width="250" height="250">
+
+                    <sub><a href="https://github.com/tankwan/tankwan.github.io/blob/master/public/airbnb-portfolio/airbnb-clustering.ipynb">Click here for ipython notebook</a></sub>
                   </div>
                 </div>
 
                 <hr class="featurette-divider">
 
-                <div class="row featurette text-left">
+                <div class="row featurette">
                   <div class="col-md-7">
 
-                    <h4 class="featurette-heading">Corroborating with Trees and Forests</h4>
+                    <h4 class="featurette-heading text-left">Corroborating with Trees and Forests</h4>
 
-                    <p>Applying decision trees, we found that the RMSE is minimised when max depth was 4, and that rating, price, and host were the most important factors in determining popularity.</p>
+                    <p class="text-left">Applying decision trees, we found that the RMSE is minimised when max depth was 4, and that rating, price, and host were the most important factors in determining popularity.</p>
 
-                    <p>From this, we observed that the main quantitative discriminant of popularity for a new listing might just be price. If it falls within a particular band, it has the chance of becoming popular. Hence, there could be potential to recommend a price band for hosts.</p>
+                    <p class="text-left">From this, we observed that the main quantitative discriminant of popularity for a new listing might just be price. If it falls within a particular band, it has the chance of becoming popular. Hence, there could be potential to recommend a price band for hosts.</p>
 
                   </div>
                   <br>
                   <div class="col-md-5">
                     <img class="featurette-image img-fluid center-block" src="../images/gini-importance.png" alt="Gini Importance"width="220" height="240">
+
+                    <sub><a href="https://github.com/tankwan/tankwan.github.io/blob/master/public/airbnb-portfolio/airbnb-decision-trees.ipynb">Click here for ipython notebook on decision trees</a> and <a href="https://github.com/tankwan/tankwan.github.io/blob/master/public/airbnb-portfolio/airbnb-random-forests.ipynb">here for random forests</a></sub>
                   </div>
 
                 </div>
@@ -300,30 +320,34 @@
 
                 <hr class="featurette-divider">
 
-                <div class="row featurette text-left">
+                <div class="row featurette">
                   <div class="col-md-12">
 
-                    <img class="featurette-image img-fluid center-block" src="../images/naive-bayes-accuracy.png" alt="Naive Bayes Accuracy" width="550" height="350"><br>
+                    <img class="featurette-image img-fluid center-block" src="../images/naive-bayes-accuracy.png" alt="Naive Bayes Accuracy" width="550" height="350">
 
-                    <h4 class="featurette-heading">The Text May Tell Us Something</h4>
+                    <sub><a href="https://github.com/tankwan/tankwan.github.io/blob/master/public/airbnb-portfolio/airbnb-naive-bayes.ipynb">Click here for ipython notebook</a></sub>
 
-                    <p>From the structured description data, we were able to apply Naive Bayes to find something interesting. With a ngrams of n=2, we were able to observe that the predictive ability of the vectorised vocabulary is surprisingly high, of up to 70% and above. With the text data, we can predict with reasonable accuracy whether a listing would be popular.</p>
+                    <h4 class="featurette-heading text-left">The Text May Tell Us Something</h4>
 
-                    <p>Interesting follow up work could be done to understand the description drafting process. For instance, particular words could contribute to popularity, making it a copywriting problem; the text could otherwise contain nouns and verbs that reflect the inherent popularity of the listings. These could all possibly translate into prompts in the form filling process to support Airbnb hosts' success.</p>
+                    <p class="text-left">From the structured description data, we were able to apply Naive Bayes to find something interesting. With a ngrams of n=2, we were able to observe that the predictive ability of the vectorised vocabulary is surprisingly high, of up to 70% and above. With the text data, we can predict with reasonable accuracy whether a listing would be popular.</p>
 
-                    <p>In the meantime, if we could take the description data and run naïve bayes through it, we could have a reasonably good predictor of popularity.</p>
+                    <p class="text-left">Interesting follow up work could be done to understand the description drafting process. For instance, particular words could contribute to popularity, making it a copywriting problem; the text could otherwise contain nouns and verbs that reflect the inherent popularity of the listings. These could all possibly translate into prompts in the form filling process to support Airbnb hosts' success.</p>
+
+                    <p class="text-left">In the meantime, if we could take the description data and run naïve bayes through it, we could have a reasonably good predictor of popularity.</p>
 
                   </div>
                 </div>
 
                 <hr class="featurette-divider">
 
-                <div class="row featurette text-left">
+                <div class="row featurette">
                   <div class="col-md-12">
 
-                    <img class="featurette-image img-fluid center-block" src="../images/airbnb-fresh-tag.png" alt="Airbnb Fresh Tag" width="550" height="400"><br>
+                    <img class="featurette-image img-fluid center-block" src="../images/airbnb-fresh-tag.png" alt="Airbnb Fresh Tag" width="550" height="400">
 
-                    <h4 class="featurette-heading">Fresh! Tag For Promising New Listings</h4>
+                    <sub>Mockup made using Balsamiq</sub>
+
+                    <h4 class="featurette-heading text-left">Fresh! Tag For Promising New Listings</h4>
 
                     <p>To apply the insights to the actual Airbnb platform, we could possibly use the description field as a predictor of the popularity of new listings. For listings that have a good chance of becoming a popular listing, the Airbnb platform should promote them as a "Fresh!" listing, in place of rating stars and review counts to give them higher odds of being considered by an Airbnb user.</p>
 
@@ -332,14 +356,16 @@
 
                 <hr class="featurette-divider">
 
-                <div class="row featurette text-left">
+                <div class="row featurette">
                   <div class="col-md-12">
 
-                    <img class="featurette-image img-fluid center-block" src="../images/price-caution.png" alt="Airbnb Price Caution" width="550" height="400"><br>
+                    <img class="featurette-image img-fluid center-block" src="../images/price-caution.png" alt="Airbnb Price Caution" width="550" height="400">
 
-                    <h4 class="featurette-heading">Suggest a Listing Price Limit</h4>
+                    <sub>Mockup made using Balsamiq</sub>
 
-                    <p>Airbnb could display a caution when an Airbnb host attempts to overprice a listing. This will help hosts better price their listings to give themselves the best chance for popularity.</p>
+                    <h4 class="featurette-heading text-left">Suggest a Listing Price Limit</h4>
+
+                    <p class="text-left">Airbnb could display a caution when an Airbnb host attempts to overprice a listing. This will help hosts better price their listings to give themselves the best chance for popularity.</p>
 
                   </div>
                   <div class="col-md-5 col-md-pull-7">
@@ -354,6 +380,7 @@
                   <div class="col-md-12">
 
                     <img class="featurette-image img-fluid center-block" src="../images/airbnb-growth-curve.png" alt="Airbnb Price Caution" width="400" height="400">
+
                     <sub class="text-center">Source: <a href="http://static2.businessinsider.com/image/55ef1d389dd7cc22008b8c30-2000-2000/airbnb%20dada.png">Business Insider</a></sub>
 
                     <br>
