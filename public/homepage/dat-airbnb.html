@@ -69,7 +69,7 @@
                     </a>
                   </div>
                   <div class="media-body text-left">
-                    <h4 class="media-heading">Background</h4>
+                    <h4 class="media-heading" onclick="console.log(TLDR.background)">Background</h4>
                     <p>Founded in 2008, Airbnb has developed into a mature hospitality sharing economy company, providing short-term stays in homes around the world. With over 2 million listings in over 190 countries, Airbnb’s host base is maturing, with popular homes in every major city, validated by numerous 5-star ratings and positive reviews.</p>
 
                     <p>With a developed host base, the Airbnb host community is facing saturation. The platform can only list a limited number of listings in each geographical area, and new hosts are finding it hard to differentiate themselves from experienced hosts. This would restrict growth of Airbnb host base, which would in turn constrain Airbnb’s overall growth.</p>
@@ -86,7 +86,7 @@
 
                 <div class="row featurette">
                   <div class="col-md-7">
-                    <h4 class="featurette-heading text-left">Approach</h4>
+                    <h4 class="featurette-heading text-left" onclick="console.log(TLDR.approach)">Approach</h4>
 
                     <p class="text-left">A wealth of home listing data is available on the Airbnb platform. With this data, we will apply a range of data science techniques to see if we are able to develop accurate predictions of whether a listing is popular.</p>
 
@@ -104,7 +104,7 @@
                 <div class="row featurette">
                   <div class="col-md-7 col-md-push-5">
 
-                    <h4 class="featurette-heading text-left">Acquiring the Data</h4>
+                    <h4 class="featurette-heading text-left" onclick="console.log(TLDR.acquiringData)">Acquiring the Data</h4>
 
                     <p class="text-left">Thanks to <em><a href="http://insideairbnb.com/">Murray Cox</a></em>, there is extensive Airbnb data available online. From the numerous data fields, we will focus on 4 areas:</p>
 
@@ -130,7 +130,7 @@
                 <div class="row featurette">
                   <div class="col-md-7">
 
-                    <h4 class="featurette-heading text-left">Focus on the SF Airbnb Community</h4>
+                    <h4 class="featurette-heading text-left" onclick="console.log(TLDR.focusOnSF)">Focus on the SF Airbnb Community</h4>
 
                     <p class="text-left">SF is the home city of Airbnb, and is currently one of the most fascinating real estate markets in the world. With the tech industry fuelling housing prices and rentals, Airbnb has grown into a way which homeowners list their homes or rooms for short-term stays in order to parlay their housing costs. The Airbnb landscape is comparatively developed in SF, which makes it a suitable city to study as a mature listings community.</p>
 
@@ -147,7 +147,7 @@
 
                 <div class="row featurette">
                   <div class="col-md-7 col-md-push-5">
-                    <h4 class="featurette-heading text-left">Visualizing the Maturation of the SF Airbnb Community</h4>
+                    <h4 class="featurette-heading text-left" onclick="console.log(TLDR.vizMaturation)">Visualizing the Maturation of the SF Airbnb Community</h4>
 
                     <p class="text-left">Using the latitude and longitude fields, we are able to geographically plot the listings and observe the distribution of listings in San Francisco. In general, the listings are concentrated in the north-east region of the city, with an outward radial dispersion towards the west and southward areas. Clustering the listings using DBSCAN, we are able to observe that there is a extended saturated region in the central to north-eastern part of SF. with the city fringes as perpheral clusters.</p>
 
@@ -164,7 +164,7 @@
 
                 <div class="row featurette">
                   <div class="col-md-4">
-                    <h4 class="featurette-heading  text-left">Affordable Price for SF Listings</h4>
+                    <h4 class="featurette-heading  text-left" onclick="console.log(TLDR.affordablePrice)">Affordable Price for SF Listings</h4>
 
                     <p class="text-left">Charting a density scatterplot by price vs. popularity, we observe that listings tend towards the $50 to $150 per bed range. This is interesting, as it suggests that many Airbnb listings are offered as lower-end accomodation, and compete on a different price point as compared to hotels.</p>
 
@@ -180,7 +180,7 @@
 
                 <div class="row featurette">
                   <div class="col-md-9 col-md-push-3">
-                    <h4 class="featurette-heading text-left">Defining Popularity</h4>
+                    <h4 class="featurette-heading text-left" onclick="console.log(TLDR.definingPopularity)">Defining Popularity</h4>
 
                     <p class="text-left">As a proxy for popularity, we will use the field “reviews per month”. Looking at the summary statistics of “reviews per month”, we can see that the 75th percentile of reviews is at 2.76 per month, so we will define popular as say, 3 or more reviews per month.</p>
 
@@ -197,7 +197,7 @@
                 <div class="row featurette">
                   <div class="col-md-5">
 
-                    <h4 class="featurette-heading  text-left">Dimensionality Reduction</h4>
+                    <h4 class="featurette-heading  text-left" onclick="console.log(TLDR.reducingDimensions)">Dimensionality Reduction</h4>
 
                     <p class="text-left">To condense the number of fields to facilitate analysis. Using Principal Component Analysis, we reduce the dataset into 10 fields:</p>
 
@@ -226,7 +226,7 @@
      
                 <div class="row featurette">
                   <div class="col-md-6 col-md-push-6">
-                    <h4 class="featurette-heading text-left">Correlations of Attributes</h4>
+                    <h4 class="featurette-heading text-left" onclick="TLDR.correlationMatrix)">Correlations of Attributes</h4>
                     
                     <p class="text-left">By plotting a correlation matrix, we can observe the relations of the fields between each other. We can observe that the field with the strongest correlation to popularity is host-relevant fields. It was also interesting to note that the data field pairs of price:space and host:rating had strong correlations with each other.</p>
 
@@ -243,7 +243,7 @@
                 <div class="row featurette">
                   <div class="col-md-7">
 
-                    <h4 class="featurette-heading text-left">Pricing: A Key Determinant of Popularity</h4>
+                    <h4 class="featurette-heading text-left" onclick="console.log(TLDR.pricing)">Pricing: A Key Determinant of Popularity</h4>
 
                     <p  class="text-left">Fitting the price data to a logistic regression showed that if a listing was priced beyond a certain point, an Airbnb listing was bound to be unpopular. At the same time, high-priced listings might have intended to position themselves as high-margin and low-volume.</p>
 
@@ -259,7 +259,7 @@
 
                 <div class="row featurette">
                   <div class="col-md-6 col-md-push-6">
-                    <h4 class="featurette-heading text-left">Three Pricing Clusters</h4>
+                    <h4 class="featurette-heading text-left" onclick="console.log(TLDR.threeClusters)">Three Pricing Clusters</h4>
 
                     <p class="text-left">Applying K-means clustering, we are generally able to observe three pricing tiers—budget range (blue), mid-end range (green), and high-end range (red). The high-end listings were essentially outliers, priced far above the rest of the listings.</p>
 
@@ -276,7 +276,7 @@
                 <div class="row featurette">
                   <div class="col-md-6">
 
-                    <h4 class="featurette-heading text-left">Rule of Three</h4>
+                    <h4 class="featurette-heading text-left" onclick="console.log(TLDR.ruleOfThree)">Rule of Three</h4>
 
                     <p class="text-left">Computing the silhouette score hockey stick curve, we can see that the SC of k=3 does not differ much by k=11 as well.</p>
 
@@ -295,7 +295,7 @@
                 <div class="row featurette">
                   <div class="col-md-7">
 
-                    <h4 class="featurette-heading text-left">Corroborating with Trees and Forests</h4>
+                    <h4 class="featurette-heading text-left" onclick="console.log(TLDR.treesAndForests)">Corroborating with Trees and Forests</h4>
 
                     <p class="text-left">Applying decision trees, we found that the RMSE is minimised when max depth was 4, and that rating, price, and host were the most important factors in determining popularity.</p>
 
@@ -330,7 +330,7 @@
 
                     <sub><a href="https://github.com/tankwan/tankwan.github.io/blob/master/public/airbnb-portfolio/airbnb-naive-bayes.ipynb">Click here for ipython notebook</a></sub>
 
-                    <h4 class="featurette-heading text-left">The Text May Tell Us Something</h4>
+                    <h4 class="featurette-heading text-left" onclick="console.log(TLDR.naiveBayes)">The Text May Tell Us Something</h4>
 
                     <p class="text-left">From the structured description data, we were able to apply Naive Bayes to find something interesting. With a ngrams of n=2, we were able to observe that the predictive ability of the vectorised vocabulary is surprisingly high, of up to 70% and above. With the text data, we can predict with reasonable accuracy whether a listing would be popular.</p>
 
@@ -427,6 +427,7 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/tether/1.3.1/js/tether.min.js"></script>
     <script src="http://v4-alpha.getbootstrap.com/dist/js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="http://v4-alpha.getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>
@@ -438,5 +439,23 @@
       });
     </script>
     <script>window.jQuery || document.write('<script src="http://v4-alpha.getbootstrap.com/assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script>
+      var TLDR = {
+        background: 'Background: The project is about applying a bunch of data science techniques to a hypothetical business challenge relevant to Airbnb',
+        approach: 'Approach: The challenge was to predict popularity of postings',
+        acquiringData: 'Acquiring Data: Data was acquired from insideairbnb.com, and there were a lot of fields',
+        focusOnSF: 'Focus on SF: The project focused on SF listings',
+        vizMaturation: 'Visualizing Maturation: SF is densely populated by Airbnb listings.\n\nNote: DBSCAN is a density-based data clustering algorithm, good for organically shaped clusters',
+        affordablePrice: 'Affordable Prices: density plots in indicate that airbnb listings tend toward $50 to $150 per bed',
+        definingPopularity: 'Defining Popularity: popularity is defined as 3 or more reviews per month',
+        reducingDimensions: 'Dimension Reduction: Principal Component Analysis (PCA) is a statistical technique that reduces the number of datafields and distills the variation between each data point',
+        correlationMatrix: 'Correlations: price and space seems related, host and rating seems related',
+        pricing: 'Listing Pricing: Pricing seems to have an upper bound, beyond which the listing was definitely unpopular',
+        threeClusters: 'K-Means Clustering: k-means clustering suggests three pricing tiers, with three notable outlier listings',
+        ruleOfThree: 'Silhouette Score: A silhouette score curve indicates that clustering the dataset into 3 groups does not differ in quality by clustering the dataset into 11 groups',
+        treesAndForests: 'Decision Trees and Random Forests: Decision tree analysis suggests that rating, price, and host were the most important factors in determining popularity',
+        naiveBayes: 'Text Prediction: A text prediction technique named naive bayes with ngrams suggests that the listing descriptions are predictive of popularity'
+      };
+    </script>
   </body>
 </html>
